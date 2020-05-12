@@ -1,0 +1,13 @@
+<van-icon name="star" bindtap="changeCollectionStatus" class="collection" color="{{collectionStatus?'red':'#666'}}" size="50rpx"/>
+<!-- 内容区 -->
+<view class="title">{{topic.topicName}}</view>
+<view class="content">
+	<view class="date" style="font-size:small">{{topic.topicDate}}</view>
+	<view class="author" style="font-size:small">{{topic.topicAuthor}}</view>
+	<rich-text nodes="{{topic.topicText}}"></rich-text>
+</view>
+<!-- 留言区 -->
+<van-cell-group>
+	<van-field bind:confirm="change" label="留言" type="textarea" placeholder="请输入留言" autosize border="{{ false }}" />
+</van-cell-group>
+<!-- 收藏 -->

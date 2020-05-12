@@ -1,0 +1,13 @@
+.top{
+  text-align: center;
+  margin: 30rpx;
+}
+.main view{
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 15rpx;
+  margin: 20rpx;
+  border-radius: 8rpx;
+  color: #fff;
+}

@@ -1,0 +1,8 @@
+.popup{
+  width: 600rpx;
+  height: 400rpx;
+}
+.select-box{
+  width:200rpx;
+  display:inline-block;
+}

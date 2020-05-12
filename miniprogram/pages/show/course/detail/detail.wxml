@@ -1,0 +1,12 @@
+<view style="padding-bottom:110rpx;" wx:if="{{course!=undefind}}">
+	<van-image width="750rpx" fit="widthFix" src="{{course.courseImage[0]}}" />
+	<view class="title">{{course.courseName}}</view>
+	<view class="content">
+		<view style="font-size:small">副标题</view>
+		<view class="video-box">
+			<video src="cloud://produce-a4nsy.7072-produce-a4nsy-1301066096/video/we-ertuijun - 微信开发者工具 Stable v1.02.2004020 2020-05-02 10-22-38.mp4" controls="true"></video>
+		</view>
+		{{course.courseDescribe}}
+	</view>
+</view>
+<van-submit-bar price="{{ course.coursePrice * 100 }}" button-text="购买" bind:submit="onSubmit" />

@@ -1,0 +1,35 @@
+<block wx:for="{{good}}" wx:key="index">
+	<!-- 产品信息 -->
+	<view>
+		<van-swipe-cell id="swipe-cell" right-width="{{ 65 }}" left-width="{{ 65 }}" async-close bind:close="onClose">
+			<view class="left col" slot="left">
+				<checkbox checked="{{cart[index].checked}}"></checkbox>
+			</view>
+			<van-card price="{{value[index]}}" desc="{{item.goodSimpleDescribe}}" title="{{item.goodName}}" thumb="{{ item.goodImage[0] }}">
+			</van-card>
+			<view class="right col" slot="right">删除</view>
+		</van-swipe-cell>
+	</view>
+	<!-- 更换规格或者修改数量 -->
+	<view style="height:120rpx;">
+		<view style="width:520rpx;float:left;">
+			<van-dropdown-menu active-color="red">
+				<van-dropdown-item bind:change="changeValue" data-index="{{index}}" value="{{value[index]}}" options="{{ option[index] }}" />
+			</van-dropdown-menu>
+		</view>
+		<view style="margin-top:20rpx;float:left;">
+			<van-stepper value="{{ cart[index].goodNum==undefind?1: cart[index].goodNum }}" bind:change="onChange" data-index="{{index}}" data-cartid="{{cart[index]._id}}" />
+		</view>
+	</view>
+</block>
+
+<van-submit-bar price="{{ total }}" button-text="立即购买" bind:submit="buyNow" tip="{{ true }}">
+	<van-tag type="primary">
+		<label>
+			<checkbox></checkbox> 全选
+		</label>
+	</van-tag>
+	<!-- <view slot="tip">
+		您的收货地址不支持同城送, <text>修改地址</text>
+	</view> -->
+</van-submit-bar>

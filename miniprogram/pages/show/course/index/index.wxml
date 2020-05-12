@@ -1,0 +1,4 @@
+<van-search bind:search="change" value="{{ value }}" placeholder="请输入搜索关键词" />
+<block wx:for="{{courseArr}}" wx:key="index">
+	<van-card bindtap="navToCourseDetail" data-index="{{index}}" price="{{item.coursePrice}}" desc="{{item.courseDescribe}}" title="{{item.courseName}}" thumb="{{ item.courseImage[0] }}" />
+</block>

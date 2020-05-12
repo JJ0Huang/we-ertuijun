@@ -1,0 +1,27 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+	<van-tab title="全部">
+		<block wx:for="{{topicArr}}" wx:key="index">
+			<van-card bindtap="navToTopicDetail" data-index="{{index}}" tag="{{item.tag}}" desc="{{item.topicDescribe}}" title="{{item.topicName}}" thumb="{{ item.topicImage }}" />
+		</block>
+	</van-tab>
+	<van-tab title="文章">
+		<block wx:for="{{topicArr}}" wx:key="index">
+			<van-card wx:if="{{item.topicType=='文章'}}" bindtap="navToTopicDetail" data-index="{{index}}" tag="{{item.tag}}" desc="{{item.topicDescribe}}" title="{{item.topicName}}" thumb="{{ item.topicImage }}" />
+		</block>
+	</van-tab>
+	<van-tab title="图书">
+		<block wx:for="{{topicArr}}" wx:key="index">
+			<van-card wx:if="{{item.topicType=='图书'}}" bindtap="navToTopicDetail" data-index="{{index}}" tag="{{item.tag}}" desc="{{item.topicDescribe}}" title="{{item.topicName}}" thumb="{{ item.topicImage }}" />
+		</block>
+	</van-tab>
+	<van-tab title="推拿手法">
+		<block wx:for="{{topicArr}}" wx:key="index">
+			<van-card wx:if="{{item.topicType=='推拿手法'}}" bindtap="navToTopicDetail" data-index="{{index}}" tag="{{item.tag}}" desc="{{item.topicDescribe}}" title="{{item.topicName}}" thumb="{{ item.topicImage }}" />
+		</block>
+	</van-tab>
+	<van-tab title="小儿常识">
+		<block wx:for="{{topicArr}}" wx:key="index">
+			<van-card wx:if="{{item.topicType=='小儿常识'}}" bindtap="navToTopicDetail" data-index="{{index}}" tag="{{item.tag}}" desc="{{item.topicDescribe}}" title="{{item.topicName}}" thumb="{{ item.topicImage }}" />
+		</block>
+	</van-tab>
+</van-tabs>

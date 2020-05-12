@@ -1,0 +1,33 @@
+<!-- 自动轮播图 -->
+<swiper autoplay circular v-if="{{good.goodImage!=null}}">
+	<swiper-item wx:for="{{good.goodImage}}" wx:key="index">
+		<image src="{{item}}" mode="aspectFit" style="width:750rpx;height:300rpx;background:#f0f0f0;"></image>
+	</swiper-item>
+</swiper>
+<!-- 内容区域 -->
+<view class="title">{{good.goodName==null?'title':good.goodName}}</view>
+<view class="content" style="width:460rpx;display:inline-block;color:red">
+	￥{{value1}}
+</view>
+<view class="select-box">
+	<van-dropdown-menu active-color="red" popup-style="color:blue" v-if="{{good.goodRule!=null}}">
+		<van-dropdown-item bind:change="change" style="color:red" value="{{ value1 }}" options="{{ option1 }}" />
+	</van-dropdown-menu>
+</view>
+<view class="content">
+	<rich-text nodes="{{good.goodDescribe==null?'<p>loading...</p>':good.goodDescribe}}"></rich-text>
+</view>
+<!-- 留言区 -->
+<!-- <van-cell-group>
+	<van-field value="{{ message }}" label="留言" type="textarea" placeholder="请输入留言" autosize border="{{ true }}" />
+</van-cell-group> -->
+<!-- 
+	底部操作栏
+-->
+<van-goods-action>
+	<van-goods-action-icon icon="shop-o" text="店铺" />
+	<van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+	<van-goods-action-icon icon="cart-o" text="购物车" bind:click="navToCart" />
+	<van-goods-action-button text="加入购物车" type="warning" bind:click="addInCart" />
+	<van-goods-action-button text="立即购买" bind:click="buyNow" />
+</van-goods-action>

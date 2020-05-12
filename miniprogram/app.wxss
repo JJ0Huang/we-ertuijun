@@ -1,0 +1,31 @@
+.bg {
+  background-color: #feafd2;
+}
+
+.title,
+.content {
+  width: 690rpx;
+  padding: 0rpx 30rpx;
+}
+
+.title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: large;
+}
+
+.content {
+  color: #666;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,8 @@
+/* miniprogram/pages/user/cart/index/index.wxss */
+.choose{
+  background:transparent;
+}
+.left,.right{
+  height: 100%;
+  text-align: center;
+}

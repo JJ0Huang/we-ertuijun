@@ -1,0 +1,21 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<!-- 自动轮播图 -->
+<swiper autoplay circular>
+	<swiper-item wx:for="{{5}}" wx:key="index">
+		<view class="bg" style="color:#fff;width:750rpx;height:300rpx;text-align:center;line-height:300rpx">
+			{{item+1}} 儿推君
+		</view>
+	</swiper-item>
+</swiper>
+<!-- 内容部分 -->
+<block wx:for="{{goodList}}" wx:key="index">
+<van-card
+  bindtap="navToGoodDetail"
+  data-index="{{index}}"
+  tag="{{item.goodTag}}"
+  price="{{item.goodRule[0].value}}"
+  desc="{{item.goodSimpleDescribe}}"
+  title="{{item.goodName}}"
+  thumb="{{ item.goodImage[0]==undefind?'':item.goodImage[0] }}"
+/>
+</block>

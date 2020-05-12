@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/editor/index/index",
+    "pages/show/course/index/index",
+    "pages/show/topic/index/index",
+    "pages/show/store/index/index",
+    "pages/user/index/index",
+    "pages/show/about/index/index",
+    "pages/show/course/detail/detail",
+    "pages/show/store/detail/detail",
+    "pages/show/topic/detail/detail",
+    "pages/user/cart/index/index",
+    "pages/show/transaction/index/index",
+    "pages/show/pay/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "儿推君",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/tabBar/index.png",
+        "selectedIconPath": "images/tabBar/index.png"
+      },
+      {
+        "pagePath": "pages/show/course/index/index",
+        "text": "课程",
+        "iconPath": "images/tabBar/course.png",
+        "selectedIconPath": "images/tabBar/course.png"
+      },
+      {
+        "pagePath": "pages/show/topic/index/index",
+        "text": "主题",
+        "iconPath": "images/tabBar/topic.png",
+        "selectedIconPath": "images/tabBar/topic.png"
+      },
+      {
+        "pagePath": "pages/show/store/index/index",
+        "text": "商城",
+        "iconPath": "images/tabBar/store.png",
+        "selectedIconPath": "images/tabBar/store.png"
+      },
+      {
+        "pagePath": "pages/user/index/index",
+        "text": "我的",
+        "iconPath": "images/tabBar/mine.png",
+        "selectedIconPath": "images/tabBar/mine.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

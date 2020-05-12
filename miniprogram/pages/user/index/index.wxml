@@ -1,0 +1,10 @@
+<view class="top">
+	<van-image round width="200rpx" height="200rpx" fit="cover" src="{{userInfo.avatarUrl}}" />
+  <view>{{userInfo.nickName}}</view>
+</view>
+<view class="main">
+  <view class="bg" bindtap="navToCart">购物车</view>
+  <view class="bg" bindtap="navToAbout">关于我们</view>
+  <view class="bg" bindtap="navToEditor">文本编辑（程序员）</view>
+  <!-- <view class="bg" bindtap="navToAbout">关于我们</view> -->
+</view>

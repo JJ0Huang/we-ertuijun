@@ -1,0 +1,22 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<!-- 自动轮播图 -->
+<swiper autoplay circular>
+	<swiper-item wx:for="{{5}}" wx:key="index">
+		<view class="bg" style="color:#fff;width:750rpx;height:300rpx;text-align:center;line-height:300rpx">
+			{{item+1}} 儿推君
+		</view>
+	</swiper-item>
+</swiper>
+<!-- 商品推荐 -->
+<van-card tag="火热" price="2.00" origin-price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL==undefind?'../../../../images/err.png':imageURL }}">
+	<view slot="footer">
+		<van-row>
+			<van-col offset="15">
+				<text style="color:red">限时秒杀：</text>
+			</van-col>
+			<van-col>
+				<van-count-down time="{{ 0.2* 1000*60*60 }}" bind:finish="hideBox" />
+			</van-col>
+		</van-row>
+	</view>
+</van-card>
